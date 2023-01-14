@@ -1,77 +1,101 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from 'react';
 import './Navbar.styles.css';
+import logo from '../../assets/images/usal.png';
+import phone from '../../assets/images/phone-call.png';
+import mail from '../../assets/images/mail.png';
+import location from '../../assets/images/gps.png';
+import grad from "../../assets/images/mortarboard.png";
+import { Link } from 'react-router-dom';
 
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+function NavBar() {
+
+  const call = () => {
+    window.location.href = 'tel:01453003';
+  };
+
+  const email = () => {
+   window.open('https://mail.google.com', '_blank');
+  };
+
+  const moodle = () => {
+    window.open('https://moodle.usal.edu.lb/lms/', '_blank');
+  };
+
 
   return (
-    <>
-      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <div className="logo-details">
-          <i class="bx bxs-book-content icon"></i>
-          <div className="logo_name">USAL Library</div>
-          <i
-            className="bx bx-menu"
-            id="btn"
-            onClick={() => setIsOpen(!isOpen)}
-          />
+    <header className="home-section">
+        <div className="row">
+          <div className="full">
+            <Link to="/">
+              <img className="logo" src={logo} alt="#" />
+            </Link>
+          </div>
         </div>
-        <ul className="nav-list">
-          {/* Search */}
-          <li>
-            <i className="bx bx-search" onClick={() => setIsOpen(!isOpen)} />
-            <input type="text" placeholder="Search..." />
-            <span className="tooltip">Search</span>
-          </li>
+        <div className="col-md-9">
+          <div className="right_header_info">
+            <ul>
+              <Link onClick={call}>
+                <li className="dinone">
+                  Contact Us :{' '}
+                  <img
+                    style={{
+                      marginRight: '15px',
+                      marginBottom: '-7px',
+                    }}
+                    src={phone}
+                    alt="dd"
+                  />
+                  <a>01-453003</a>
+                </li>
+              </Link>
 
-          {/* Messages */}
-          <li>
-            <Link to="/messages">
-              <i className="bx bx-chat" />
-              <span className="links_name">Messages</span>
-            </Link>
-            <span className="tooltip">Messages</span>
-          </li>
+              <Link onClick={email}>
+                <li className="dinone">
+                  <img
+                    style={{ marginRight: '15px', marginBottom: '-7px' }}
+                    src={mail}
+                    alt="#"
+                  />
+                  <a>library@usal.edu.lb</a>
+                </li>
+              </Link>
 
-          {/* Saved */}
+              <Link onClick={moodle}>
+                <li className="dinone">
+                  <img
+                    style={{ marginRight: '15px', marginBottom: '-7px' }}
+                    src={grad}
+                    alt="#"
+                  />
+                  <a>Moodle</a>
+                </li>
+              </Link>
 
-          <li>
-            <Link to="/saved">
-              <i className="bx bx-heart" />
-              <span className="links_name">Saved</span>
-            </Link>
-            <span className="tooltip">Saved</span>
-          </li>
-
-          {/* Settings */}
-          <li>
-            <Link to="settings">
-              <i className="bx bx-cog" />
-              <span className="links_name">Setting</span>
-            </Link>
-            <span className="tooltip">Setting</span>
-          </li>
-
-          {/* User */}
-          <Link to="logIn">
-            <li className="profile">
-              <div className="profile-details">
-                <div className="name_job">
-                  <div className="name">Hadi Soufan</div>
-                  <div className="job">Web Developer</div>
-                </div>
-              </div>
-              <i className="bx bx-log-out" id="log_out"></i>
-            </li>
-          </Link>
-        </ul>
-      </div>
-      <section className="home-section">
-        <div className="text">USAL</div>
-      </section>
-    </>
+              <li className="dinone">
+                <img
+                  style={{
+                    marginRight: '15px',
+                    marginBottom: '-7px',
+                  }}
+                  src={location}
+                  alt="#"
+                />
+                <a>Ghobeiry,Old Airport Road, Beirut, Lebanon</a>
+              </li>
+              <li className="button_user">
+                <a className="button active" href="#">
+                  Login
+                </a>
+                <a className="button" href="#">
+                  <span>Sign Up</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </header>
   );
 }
 
-export default Navbar;
+export default NavBar;
