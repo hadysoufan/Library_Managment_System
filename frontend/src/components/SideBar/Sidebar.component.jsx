@@ -1,9 +1,22 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.styles.css';
+import './Sidebar.responsive.styles.css';
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const call = () => {
+    window.location.href = 'tel:01453003';
+  };
+
+  const email = () => {
+    window.open('https://mail.google.com', '_blank');
+  };
+
+  const moodle = () => {
+    window.open('https://moodle.usal.edu.lb/lms/', '_blank');
+  };
 
   return (
     <>
@@ -44,15 +57,6 @@ function Sidebar() {
             <span className="tooltip">Saved</span>
           </li>
 
-          {/* Settings */}
-          <li>
-            <Link to="settings">
-              <i className="bx bx-cog" />
-              <span className="links_name">Setting</span>
-            </Link>
-            <span className="tooltip">Setting</span>
-          </li>
-
           {/* User */}
           <Link to="logIn">
             <li className="profile">
@@ -65,10 +69,55 @@ function Sidebar() {
               <i className="bx bx-log-out" id="log_out"></i>
             </li>
           </Link>
+
+          {/* Contact */}
+          <li className="hidden">
+            <Link onClick={call}>
+              <i class="bx bxs-contact" />
+              <span className="links_name">Contact</span>
+            </Link>
+            <span className="tooltip">01-453003</span>
+          </li>
+
+          {/* Email */}
+          <li className="hidden">
+            <Link onClick={email}>
+              <i class="bx bx-envelope" />
+              <span className="links_name">Email</span>
+            </Link>
+            <span className="tooltip">library@usal.edu.lb</span>
+          </li>
+
+          {/* Moodle */}
+          <li className="hidden">
+            <Link onClick={moodle}>
+              <i class="bx bxs-graduation" />
+              <span className="links_name">Moodle</span>
+            </Link>
+            <span className="tooltip">Moodle</span>
+          </li>
+
+          {/* Location */}
+          <li className="hidden">
+            <Link to="/messages">
+              <i class="bx bx-current-location" />
+              <span className="links_name">Location</span>
+            </Link>
+            <span className="tooltip">
+              Ghobeiry,Old Airport Road, Beirut, Lebanon
+            </span>
+          </li>
+
+          {/* Settings */}
+          <li>
+            <Link to="settings">
+              <i className="bx bx-cog" />
+              <span className="links_name">Setting</span>
+            </Link>
+            <span className="tooltip">Setting</span>
+          </li>
         </ul>
       </div>
-
-         
     </>
   );
 }
