@@ -1,76 +1,86 @@
-header {
-  position: fixed;
-  width: 100%;
-}
+@media (min-width: 1024px) {
+  /* Styles for 14 inch screen */
 
-.logo {
-  margin: 1rem;
-  width: 20rem;
-  height: auto;
-}
+  .logo-section {
+    position: relative;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 3;
+  }
 
-.right_header_info ul {
-  position: relative;
-  float: right;
-  bottom: 6rem;
-  right: 1rem;
-}
-.right_header_info ul li {
-  display: inline;
-  font-size: 16px;
-  margin-left: 45px;
-  color: #222;
-  font-weight: 400;
-  float: left;
-}
-.right_header_info ul li a {
-  color: #222;
-  font-weight: 300;
-  text-decoration: none;
-}
-.button_user a {
-  float: left;
-  min-width: 75px;
-  height: 40px;
-  text-align: center;
-  line-height: 38px;
-  position: relative;
-  top: -7px;
-  padding: 0 15px;
-  margin: 0 2px;
-  border: solid #222 1px;
-}
-.button_user a:hover,
-.button_user a:focus,
-.button_user a.active {
-  background: #528c2e;
-  color: #eee;
-  border-color: #528c2e;
-  color: #eee;
-}
-.button span {
- cursor: pointer;
- display: inline-block;
- position: relative;
- transition: 0.4s;
-}
+  .sidebar.open ~ logo-section {
+    left: 250px;
+    width: calc(100% - 250px);
+  }
 
-.button span:after {
- content: ' for free';
- color: #eee;
- position: absolute;
- opacity: 0;
- top: 0;
- right: -20px;
- transition: 0.7s;
-}
+  .logo {
+    width: 14rem;
+    height: auto;
+  }
 
-.button:hover span {
- padding-right: 4em;
-}
+  .right_header_info ul {
+    position: relative;
+    float: right;
+    bottom: 6rem;
+    right: 1rem;
+  }
+  .right_header_info ul li {
+    display: inline;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 35px;
+    color: #222;
+    float: left;
+  }
+  .right_header_info ul li a {
+    color: #222;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  .button_user a {
+    float: left;
+    width: auto;
+    height: 40px;
+    text-align: center;
+    line-height: 38px;
+    position: relative;
+    top: -7px;
+    padding: 0 15px;
+    margin: 0 2px;
+    border: solid #222 1px;
+  }
+  .button_user a:hover,
+  .button_user a:focus,
+  .button_user a.active {
+    background: #528c2e;
+    color: #eee;
+    border-color: #528c2e;
+    color: #eee;
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+  }
 
-.button:hover span:after {
- opacity: 4;
- right: 0;
-}
+  .button span:after {
+    content: ' for free';
+    color: #eee;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.7s;
+  }
 
+  .button:hover span {
+    padding-right: 4em;
+  }
+
+  .button:hover span:after {
+    opacity: 4;
+    right: 0;
+  }
+}

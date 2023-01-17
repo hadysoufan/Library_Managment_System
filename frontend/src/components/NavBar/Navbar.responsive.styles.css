@@ -1,0 +1,62 @@
+/* 24 inch screen */
+@media (min-width: 1920px) {
+  /* Styles for 24 inch screen */
+
+
+
+}
+
+@media only screen 
+and (min-width: 1224px) 
+ {
+  /* for mac book  */
+
+  .logo {
+    margin: 1rem;
+    width: 14rem;
+    height: auto;
+  }
+
+  .right_header_info ul li {
+    display: inline;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 15px;
+    color: #222;
+    float: left;
+  }
+
+
+}
+
+
+
+@media only screen and (min-width: 480px) 
+and (max-width: 767px) 
+and (orientation: landscape){
+  /* mobile phones on landscape mode */
+
+  
+
+}
+
+@media only screen 
+and (min-width: 320px) 
+and (max-width: 479px) 
+and (orientation: portrait) { 
+  /* mobile phones on portrait mode */
+  
+  .logo {
+    margin: 1rem 7rem;
+    width: 14rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .right_header_info ul {
+    display: none;
+  }
+
+
+
+}
