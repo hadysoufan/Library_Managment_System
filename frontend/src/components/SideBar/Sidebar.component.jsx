@@ -57,19 +57,6 @@ function Sidebar() {
             <span className="tooltip">Saved</span>
           </li>
 
-          {/* User */}
-          <Link to="logIn">
-            <li className="profile">
-              <div className="profile-details">
-                <div className="name_job">
-                  <div className="name">Hadi Soufan</div>
-                  <div className="job">Web Developer</div>
-                </div>
-              </div>
-              <i className="bx bx-log-out" id="log_out"></i>
-            </li>
-          </Link>
-
           {/* Contact */}
           <li className="hidden">
             <Link onClick={call}>
@@ -116,6 +103,28 @@ function Sidebar() {
             </Link>
             <span className="tooltip">Setting</span>
           </li>
+
+          {/* user */}
+          <li className="hidden">
+            <Link to="/user">
+              <i class="bx bx-user-pin" />
+              <span className="links_name">USER</span>
+            </Link>
+            <span className="tooltip">USER</span>
+          </li>
+
+          {/* User */}
+          <Link to="logIn">
+            <li className="profile">
+              <div className="profile-details">
+                <div className="name_job">
+                  <div className="name">Hadi Soufan</div>
+                  <div className="job">Web Developer</div>
+                </div>
+              </div>
+              <i className="bx bx-log-out" id="log_out"></i>
+            </li>
+          </Link>
         </ul>
       </div>
     </>

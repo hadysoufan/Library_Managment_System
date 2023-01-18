@@ -1,5 +1,42 @@
 @media only screen and (min-width: 320px) and (max-width: 479px) and (orientation: portrait) {
-  .hidden {
+  /* for mobile screen */
+  .sidebar {
+    height: 10vh;
+    border-radius: 65% 35% 65% 35% / 34% 60% 40% 66%;
+  }
+
+  .sidebar.open {
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+  }
+  .nav-list li,
+  .nav-list input {
+    display: none;
+  }
+  .sidebar.open .nav-list li,
+  .sidebar.open .nav-list input {
+    display: block;
+  }
+  .logo-details {
+    cursor: pointer;
+  }
+
+  .sidebar.open li.profile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  /* for tablet  */
+
+  .nav-list li,
+  .nav-list input {
+    display: block;
+  }
+
+  .sidebar.open .nav-list li,
+  .sidebar.open .nav-list input {
     display: block;
   }
 }
