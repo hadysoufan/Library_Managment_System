@@ -9,6 +9,7 @@ import './Navbar.styles.css';
 import './Navbar.responsive.styles.css';
 
 function NavBar() {
+
   const call = () => {
     window.location.href = 'tel:01453003';
   };

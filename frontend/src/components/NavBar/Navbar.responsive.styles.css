@@ -1,14 +1,9 @@
 /* 24 inch screen */
-@media (min-width: 1920px) {
+
   /* Styles for 24 inch screen */
 
 
-
-}
-
-@media only screen 
-and (min-width: 1224px) 
- {
+@media only screen and (min-width: 1280px) {
   /* for mac book  */
 
   .logo {
@@ -21,42 +16,47 @@ and (min-width: 1224px)
     display: inline;
     font-size: 15px;
     font-weight: 600;
-    margin-left: 15px;
+    margin-left: 10px;
     color: #222;
     float: left;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* for tablet screens */
+
+  .logo {
+    margin:  2rem auto;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+   .right_header_info ul {
+    display: none;
   }
 
 
 }
 
 
-
-@media only screen and (min-width: 480px) 
-and (max-width: 767px) 
-and (orientation: landscape){
+@media only screen and (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {
   /* mobile phones on landscape mode */
-
-  
-
 }
 
-@media only screen 
-and (min-width: 320px) 
-and (max-width: 479px) 
-and (orientation: portrait) { 
+@media only screen and (min-width: 320px) and (max-width: 479px) and (orientation: portrait) {
   /* mobile phones on portrait mode */
-  
+
   .logo {
-    margin: 1rem 7rem;
+    margin: 1rem;
     width: 14rem;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .right_header_info ul {
     display: none;
   }
-
-
-
 }

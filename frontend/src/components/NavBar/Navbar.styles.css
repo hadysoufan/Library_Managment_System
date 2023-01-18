@@ -1,18 +1,4 @@
-@media (min-width: 1024px) {
-  /* Styles for 14 inch screen */
 
-  .logo-section {
-    position: relative;
-    left: 78px;
-    width: calc(100% - 78px);
-    transition: all 0.5s ease;
-    z-index: 3;
-  }
-
-  .sidebar.open ~ logo-section {
-    left: 250px;
-    width: calc(100% - 250px);
-  }
 
   .logo {
     width: 14rem;
@@ -28,17 +14,17 @@
   .right_header_info ul li {
     display: inline;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 300;
     margin-left: 35px;
     color: #222;
     float: left;
   }
   .right_header_info ul li a {
     color: #222;
-    font-weight: 300;
     text-decoration: none;
   }
   .button_user a {
+    display: inline;
     float: left;
     width: auto;
     height: 40px;
@@ -71,7 +57,6 @@
     position: absolute;
     opacity: 0;
     top: 0;
-    right: -20px;
     transition: 0.7s;
   }
 
@@ -83,4 +68,3 @@
     opacity: 4;
     right: 0;
   }
-}
