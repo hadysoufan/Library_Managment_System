@@ -1,16 +1,19 @@
 import React from 'react';
-import Navbar from '../NavBar/Navbar.component';
+import Footer from '../Footer/Footer.component';
+import Header from '../Header/Header.component';
+import NavBar from '../NavBar/Navbar.component';
+import Sidebar from '../SideBar/Sidebar.component';
+import './HomeScreen.styles.css';
 
 function HomeScreen() {
-
-  return(
-    <div>
-      <Navbar />
-      
-    </div>
-  )
-
-
+  return (
+    <>
+      <NavBar />
+      <Sidebar />
+      <Header />
+      <Footer />
+    </>
+  );
 }
 
 export default HomeScreen;
