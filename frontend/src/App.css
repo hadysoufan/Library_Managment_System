@@ -1,5 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-
-
+.home-section{
+  position: relative;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+  padding-left: 150px;
+}
+/* .sidebar.open ~ .home-section, .logo-section {
+  left: 250px;
+  width: calc(100% - 250px);
+} */
+/* .home-section .text {
+  display: inline-block;
+  color: #528c2e;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px;
+} */
 
 /* #d8d5e4 #123925 #528c2e */
+
+.logo-section, .footer-section {
+    position: absolute;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 3;
+  }

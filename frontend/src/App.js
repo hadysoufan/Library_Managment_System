@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import "./App.css";
 import HomeScreen from '../src/components/MainScreen/HomeScreen.component';
-
+import './App.css';
 
 function App() {
   return (
@@ -10,10 +9,7 @@ function App() {
         <Route path="/" element={<HomeScreen />} />
       </Routes>
     </Router>
-
-
-
-  )
+  );
 }
 
 export default App;
